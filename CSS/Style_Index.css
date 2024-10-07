@@ -1,0 +1,49 @@
+@media screen and (min-width:960px) {
+    
+
+#navegacion{
+    background: rgb(149,149,149);
+    background: linear-gradient(0deg, rgba(149,149,149,1) 4%, rgba(214,177,24,1) 93%);
+    border-radius: 15px;
+
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Si se cambia a 100vh puede ocupar toda la pantalla */
+    background-image: url('../IMG/img-quinta.jpg') ; 
+    background-size: cover; /* La imagen cubre toda el área sin distorsión */
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Estilos para el contenido superpuesto */
+.overlay-content {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 25vh; 
+    background: rgba(223, 220, 190, 0.9); 
+    color: #000000; 
+    padding: 20px;
+    text-align: center;
+}
+
+.boton-reserva,
+.boton-mas-info {
+    display: block;
+    width: 100%;
+    height: 100%; /* Ocupa toda la altura disponible en la columna */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+}
+/*En dispositivos moviles no habrá imagen de fondo, ya que quita accesibilidad */
+@media screen and (max-device-width: 480px) {
+    #navegacion{
+        background: rgb(149,149,149);
+        background: linear-gradient(0deg, rgba(149,149,149,1) 4%, rgba(214,177,24,1) 93%);
+        border-radius: 15px;
+    }
+}

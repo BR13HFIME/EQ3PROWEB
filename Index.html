@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Style_Index.css">
+</head>
+<body>
+<!--Esta parte puede ser metida directamente dentro del contenedor 
+con imagen de fondo, con el color actual que tiene no me convence, pero
+si cambian el color y su transparencia puede funcionar-->
+    <nav class="navbar mt-2 ms-2 me-2 mb-2" id="navegacion">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Quinta Las Lupitas</a>
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Ingresa/Registrate
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sección de imagen de fondo -->
+    <div class="background-image">
+    <!-- Contenido que tapa parte de la imagen -->
+        <div class="overlay-content">
+            <h1>Quinta Las Lupitas</h1>
+            <h5>Haz hoy tu reservación</h5>
+        </div>
+    </div>
+
+    <!--Hay de dos, hacemos que los botones estén encima de la imagen y 
+    nos chingamos intentando hacerlo con css, o, ponemos los botones abajo y que eso sirva de decoración-->
+    <div class="mt-4 mb-2 ms-2 me-2" >
+        <div class="row">
+            <div class="col-8">
+                <a class="btn btn-warning boton-reserva">
+                    Hacer reservación <!--Alguien centre esta mierda verticalmente, no se como-->
+                </a>
+            </div>
+            <div class="col-4">
+                <a class="btn btn-warning boton-mas-info">
+                    Más información <!--Alguien centre esta mierda verticalmente, no se como-->
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--JS-->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/eafa58709c.js" crossorigin="anonymous"></script>
+    <script src="JS/JS_Index.js"></script>
+</body>
+</html>
