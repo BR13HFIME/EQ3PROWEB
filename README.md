@@ -1,0 +1,1 @@
+Este es el proyecto de la clase y el laboratorio de Programación Web (Gpo 005 para la clase y el Gpo de laboratorio varia por miembro del equipo), es dedicado a una quinta de un amigo de uno de los miembros del equipo. 
