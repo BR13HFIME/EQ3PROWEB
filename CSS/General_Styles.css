@@ -1,0 +1,17 @@
+
+@media screen and (min-width:960px) {
+    
+#navegacion{
+    background-color: #d7c97f;
+    border-radius: 15px;
+
+}
+
+}
+
+@media screen and (max-device-width: 480px) {
+    #navegacion{
+        background-color: #d7c97f;
+        border-radius: 15px;
+    }
+}

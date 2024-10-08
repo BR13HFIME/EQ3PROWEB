@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Style_LoginAndRegistro.css">
+    <link rel="stylesheet" href="CSS/General_Styles.css">
+</head>
+<body>
+    <nav class="navbar mt-2 ms-2 me-2 mb-2" id="navegacion">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Quinta Las Lupitas</a>
+            </a>
+        </div>
+    </nav>
+    <div class="container-fluid d-flex justify-content-center align-items-center" id="contenedor-login">
+        <div class="container d-flex justify-content-center align-items-center login-container" id="div-god">
+            <div class="card p-4 shadow" id ="tarjeta">
+              <h3 class="text-center mb-3">Registro</h3>
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electronico">
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="email" placeholder="Introduce tu nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="email" placeholder="Introduce tus apellidos">
+                </div>
+                <div class="mb-3">
+                    <label for="tel" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control" id="email" placeholder="Introduce tu número de telefono">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" placeholder="Crea una contraseña">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Confirma tu contraseña</label>
+                    <input type="Password" class="form-control" id="email" placeholder="Vuelve a introducir tu contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+              </form>
+              ¿Ya tienes cuenta?
+              <a href="#">Inicia sesión aquí</a> <!--Cambienle el color a esto para que combine con lo de atrás, o ignoren 
+              este comentario si ya decidimos una mejor paleta de colores-->
+            </div>
+          </div>
+
+</body>
+</html>
