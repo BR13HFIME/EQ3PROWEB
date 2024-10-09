@@ -33,7 +33,7 @@
 }
 }
 /*En dispositivos moviles no habrá imagen de fondo, ya que quita accesibilidad */
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 768px) {
     .background-image{
         display: none;
     }
