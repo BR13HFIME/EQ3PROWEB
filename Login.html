@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="CSS/General_Styles.css">
 </head>
 <body>
-    <nav class="navbar mt-2 ms-2 me-2 mb-2" id="navegacion">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Quinta Las Lupitas</a>
-            </a>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Index.html">
+            <i class="fa-solid fa-umbrella-beach fa-2xl"></i></a>
+        <!--Creamos el boton de compartir y su modal
+          para que el usuario pueda compartir lo que
+          necesite-->
+        <a href=""><i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #fdeac9;"></i></a>
+
+    </div>
+</nav>
     <div class="container-fluid d-flex justify-content-center align-items-center" id="contenedor-login">
         <div class="container d-flex justify-content-center align-items-center login-container" id="div-god">
             <div class="card p-4 shadow" id ="tarjeta">
@@ -29,16 +34,18 @@
                   <label for="password" class="form-label">Contraseña</label>
                   <input type="password" class="form-control" id="password" placeholder="Introduce tu contraseña">
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-dark w-100">Iniciar Sesión</button>
               </form>
               ¿No tienes cuenta?
-              <a href="#">Registrate aquí</a> <!--Cambienle el color a esto para que combine con lo de atrás, o ignoren 
+
+              <a href="#"><button type="button" class="btn btn-outline-dark">Registrate Aqui !!!</button>
+              </a> <!--Cambienle el color a esto para que combine con lo de atrás, o ignoren
               este comentario si ya decidimos una mejor paleta de colores-->
             </div>
           </div>
       <script src="JS/bootstrap.bundle.min.js"></script>
       <script src="JS/jquery-3.7.1.min.js"></script>
-      <script src="https://kit.fontawesome.com/eafa58709c.js" crossorigin="anonymous"></script>
+      <script src="JS/fontawesome.js"></script>
       <script src="JS/JS_Login.js "></script>
 
 </body>
