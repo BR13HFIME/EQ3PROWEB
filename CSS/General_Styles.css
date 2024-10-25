@@ -7,11 +7,21 @@
 
 }
 
+
 }
 
 @media screen and (max-device-width: 480px) {
     #navegacion{
         background-color: #d7c97f;
         border-radius: 15px;
+    }
+}
+
+.navbar{
+    background-color: #f8f2eb;
+}
+@media screen and (max-width: 720px) {
+    .ocultar-div{
+        display:none;
     }
 }
