@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Interactivo y Funcional</title>
+    <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="header">
+            <button onclick="cambiarMes(-1)">&#8592;</button>
+            <h2 id="month-year">Noviembre 2024</h2>
+            <button onclick="cambiarMes(1)">&#8594;</button>
+        </div>
+        <div class="calendar">
+            <!-- Días generados dinámicamente -->
+        </div>
+        <div class="legend">
+            <span class="legend-item reservado">Reservado</span>
+            <span class="legend-item pendiente">Pendiente</span>
+            <span class="legend-item libre">Libre</span>
+        </div>
+        <div id="estadoFecha"></div>
+    </div>
+    <script src="calendario.js"></script>
+</body>
+</html>
