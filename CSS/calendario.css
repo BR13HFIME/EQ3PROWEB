@@ -1,0 +1,87 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calendar-container {
+    text-align: center;
+    width: 350px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.calendar button {
+    padding: 15px;
+    font-size: 1.2em;
+    color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.reservado {
+    background-color: #ffa500;
+}
+
+button.pendiente {
+    background-color: #9370DB;
+}
+
+button.libre {
+    background-color: #f5f5dc;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.legend-item {
+    font-size: 0.9em;
+}
+
+.legend-item.reservado {
+    color: #ffa500;
+}
+
+.legend-item.pendiente {
+    color: #9370DB;
+}
+
+.legend-item.libre {
+    color: #f5f5dc;
+}
+
+#estadoFecha {
+    margin-top: 20px;
+    font-size: 1em;
+}
