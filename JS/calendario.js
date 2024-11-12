@@ -4,7 +4,7 @@ const estados = {
     reservado: "reservado"
 };
 
-// Estructura para almacenar el estado de los días
+
 let calendarioEstado = {};
 
 let currentMonth = new Date().getMonth();
@@ -73,5 +73,5 @@ function cambiarEstadoDia(elemento, year, month, day) {
     estadoFecha.textContent = `La fecha ${day} está ahora en estado: ${nuevoEstado}.`;
 }
 
-// Inicializar el calendario
+
 mostrarMes();
