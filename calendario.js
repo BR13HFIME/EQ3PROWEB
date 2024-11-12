@@ -4,7 +4,7 @@ const estados = {
     reservado: "reservado"
 };
 
-// Estructura para almacenar el estado de los días
+
 let calendarioEstado = {};
 
 let currentMonth = new Date().getMonth();
