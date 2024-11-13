@@ -1,5 +1,5 @@
 const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-const fechasOcupadas = ["2024-11-15", "2024-11-16", "2024-11-20"];
+let fechasOcupadas = ["2024-11-15", "2024-11-16", "2024-11-20"];
 let fechaActual = new Date();
 
 function renderizarCalendario() {
@@ -41,4 +41,34 @@ function cambiarMes(direccion) {
     renderizarCalendario();
 }
 
+function agregarReserva(fechaInicio, fechaFin) {
+    const inicio = new Date(fechaInicio);
+    const fin = new Date(fechaFin);
+
+    while (inicio <= fin) {
+        const fechaFormateada = `${inicio.getFullYear()}-${String(inicio.getMonth() + 1).padStart(2, '0')}-${String(inicio.getDate()).padStart(2, '0')}`;
+        if (!fechasOcupadas.includes(fechaFormateada)) {
+            fechasOcupadas.push(fechaFormateada);
+        }
+        inicio.setDate(inicio.getDate() + 1);
+    }
+    renderizarCalendario();
+}
+
 document.addEventListener("DOMContentLoaded", renderizarCalendario);
+
+const bookingForm = document.getElementById("bookingForm");
+bookingForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const startDate = document.getElementById("startDate").value;
+    const endDate = document.getElementById("endDate").value;
+
+    if (startDate && endDate) {
+        agregarReserva(startDate, endDate);
+        alert("Reserva realizada con éxito.");
+    } else {
+        alert("Por favor, selecciona las fechas de entrada y salida.");
+    }
+});
+
