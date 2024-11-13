@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<PwebdbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<ApplicationUser, ApplicationRol>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -36,7 +37,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // Asegúrate de que la autenticación esté configurada
+app.UseAuthentication(); // Asegï¿½rate de que la autenticaciï¿½n estï¿½ configurada
 app.UseAuthorization();
 
 app.MapControllerRoute(

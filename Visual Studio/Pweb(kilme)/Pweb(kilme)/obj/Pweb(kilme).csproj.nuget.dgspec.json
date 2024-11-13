@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Martín\\source\\repos\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj": {}
+    "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj": {}
   },
   "projects": {
-    "C:\\Users\\Martín\\source\\repos\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj": {
+    "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Martín\\source\\repos\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+        "projectUniqueName": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
         "projectName": "Pweb(kilme)",
-        "projectPath": "C:\\Users\\Martín\\source\\repos\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+        "projectPath": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
         "packagesPath": "C:\\Users\\Martín\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Martín\\source\\repos\\Pweb(kilme)\\Pweb(kilme)\\obj\\",
+        "outputPath": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Martín\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,9 +62,17 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
             }
           },
           "imports": [
