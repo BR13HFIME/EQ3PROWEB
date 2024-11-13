@@ -1,77 +1,59 @@
-const estados = {
-    libre: "libre",
-    pendiente: "pendiente",
-    reservado: "reservado"
-};
+// Array de los nombres de los meses y días de la semana
+const meses = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+];
 
+let fechaActual = new Date();
 
-let calendarioEstado = {};
-
-let currentMonth = new Date().getMonth();
-let currentYear = new Date().getFullYear();
-
-function cambiarMes(movimiento) {
-    currentMonth += movimiento;
-    if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-    } else if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
+function renderizarCalendario() {
+    const mesAnio = document.getElementById("month-year");
+    const calendario = document.querySelector(".calendar");
+    
+    const mes = fechaActual.getMonth();
+    const anio = fechaActual.getFullYear();
+    
+    // Actualizar encabezado del mes y año
+    mesAnio.textContent = `${meses[mes]} ${anio}`;
+    
+    // Obtener el primer y último día del mes
+    const primerDia = new Date(anio, mes, 1).getDay();
+    const ultimoDia = new Date(anio, mes + 1, 0).getDate();
+    
+    // Limpiar el calendario
+    calendario.innerHTML = "";
+    
+    // Llenar los días vacíos antes del primer día del mes
+    for (let i = 0; i < primerDia; i++) {
+        const celda = document.createElement("div");
+        celda.classList.add("empty");
+        calendario.appendChild(celda);
     }
-    mostrarMes();
-}
+    
+    // Llenar los días del mes
+    for (let dia = 1; dia <= ultimoDia; dia++) {
+        const celda = document.createElement("div");
+        celda.classList.add("day");
+        celda.textContent = dia;
 
-function mostrarMes() {
-    const calendar = document.querySelector('.calendar');
-    calendar.innerHTML = ''; // Limpiar los días
+        // Agregar eventos de ejemplo
+        celda.addEventListener("click", () => seleccionarFecha(dia));
 
-    const monthYear = document.getElementById('month-year');
-    const nombreMes = new Date(currentYear, currentMonth).toLocaleString('es', { month: 'long' });
-    monthYear.textContent = `${nombreMes.charAt(0).toUpperCase() + nombreMes.slice(1)} ${currentYear}`;
-
-    const diasMes = new Date(currentYear, currentMonth + 1, 0).getDate();
-    const primerDiaMes = new Date(currentYear, currentMonth, 1).getDay();
-
-    for (let i = 0; i < primerDiaMes; i++) {
-        const espacioVacio = document.createElement('div');
-        calendar.appendChild(espacioVacio);
-    }
-
-    for (let dia = 1; dia <= diasMes; dia++) {
-        const estadoDia = obtenerEstadoDia(currentYear, currentMonth, dia);
-        const diaElemento = document.createElement('button');
-        diaElemento.textContent = dia;
-        diaElemento.classList.add(estadoDia);
-        diaElemento.onclick = () => cambiarEstadoDia(diaElemento, currentYear, currentMonth, dia);
-        calendar.appendChild(diaElemento);
+        calendario.appendChild(celda);
     }
 }
 
-function obtenerEstadoDia(year, month, day) {
-    const key = `${year}-${month + 1}-${day}`;
-    return calendarioEstado[key] || estados.libre;
+// Cambiar de mes
+function cambiarMes(direccion) {
+    fechaActual.setMonth(fechaActual.getMonth() + direccion);
+    renderizarCalendario();
 }
 
-function cambiarEstadoDia(elemento, year, month, day) {
-    const key = `${year}-${month + 1}-${day}`;
-    const estadoActual = calendarioEstado[key] || estados.libre;
-
-    let nuevoEstado;
-    if (estadoActual === estados.libre) {
-        nuevoEstado = estados.pendiente;
-    } else if (estadoActual === estados.pendiente) {
-        nuevoEstado = estados.reservado;
-    } else {
-        nuevoEstado = estados.libre;
-    }
-
-    calendarioEstado[key] = nuevoEstado;
-    elemento.className = nuevoEstado;
-
-    const estadoFecha = document.getElementById('estadoFecha');
-    estadoFecha.textContent = `La fecha ${day} está ahora en estado: ${nuevoEstado}.`;
+// Función para seleccionar fecha
+function seleccionarFecha(dia) {
+    const estadoFecha = document.getElementById("estadoFecha");
+    estadoFecha.textContent = `Fecha seleccionada: ${dia} ${meses[fechaActual.getMonth()]} ${fechaActual.getFullYear()}`;
 }
 
-
-mostrarMes();
+// Inicializar el calendario al cargar la página
+document.addEventListener("DOMContentLoaded", renderizarCalendario);
