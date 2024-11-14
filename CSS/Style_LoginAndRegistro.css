@@ -1,6 +1,11 @@
+
+.form-label{
+    color: #fdeac9;
+}
+
 #tarjeta{
     width: 600px;
-    background-color: #efd7be;
+    background-color: #2b3035;
 }
 
 #contenedor-login{
@@ -8,11 +13,7 @@
    
 }
 body{
-    background-image: url(../IMG/img-quinta.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #ff0000;
+    background-color: #fdeac9;
     height: 100vh;
     width: 100%;
 }
@@ -21,5 +22,10 @@ body{
 }
 
 #letterstyle{
-    color: #ffffff;
+    color: #fdeac9;
+}
+
+.form-control{
+    color: #2b3035;
+    background-color: #fdeac9;
 }

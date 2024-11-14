@@ -1,22 +1,25 @@
-body {
+body{
     font-family: Arial, sans-serif;
+    background-color: #0a0a0a !important;
 }
 
-.album {
-    background-color: #f8f9fa;
+.card{
+        background-color: #413838;
+    border-color: #f59943;
+    border-width: 5px;
+   border-radius: 10px;
 }
 
 .card-img-top {
     width: 100%;
     height: 225px;
     object-fit: cover;
-    background-color: #55595c;
 }
 
 .card-img-top::after {
     content: "Thumbnail";
     position: absolute;
-    color: #eceeef;
+    color: #ffe1c5;
     font-size: 1.2em;
     top: 50%;
     left: 50%;
@@ -33,4 +36,15 @@ body {
 
 .text-muted {
     font-size: 0.75em;
+}
+
+.fa-solid{
+    color: #f5e0ce;
+}
+.card-body{
+    background-color: rgba(22, 20, 20, 0.7);
+    border-radius: 10px;
+}
+p{
+    color: #fdefe2;
 }
