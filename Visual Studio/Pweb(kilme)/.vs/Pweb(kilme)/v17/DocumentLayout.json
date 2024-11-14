@@ -1,44 +1,52 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\",
+  "WorkspaceRootPath": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\pweb(kilme).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\pweb(kilme).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\pweb(kilme).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\quintumhr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\quintumhr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\models\\quintumhr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\dbmodels\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\dbmodels\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\models\\dbmodels\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\estadohr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\estadohr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\models\\estadohr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\controllers\\estadoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\controllers\\estadoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\controllers\\estadoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\controllers\\quintumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\controllers\\quintumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\controllers\\quintumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\dbmodels\\quintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\models\\dbmodels\\quintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\models\\dbmodels\\quintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\views\\quintums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\views\\quintums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\views\\quintums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mart\u00EDn\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\source\\repos\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\migrations\\20241113183528_addnombretoquintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|c:\\users\\mart\u00EDn\\desktop\\eq3proweb\\visual studio\\pweb(kilme)\\pweb(kilme)\\migrations\\20241113183528_addnombretoquintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF3956BF-BEA7-446F-BA5A-583C42C5D501}|Pweb(kilme)\\Pweb(kilme).csproj|solutionrelative:pweb(kilme)\\migrations\\20241113183528_addnombretoquintum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,23 +62,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Pweb(kilme)\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Pweb(kilme)\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T06:27:57.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pweb(kilme)\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pweb(kilme)\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T06:12:58.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Pweb(kilme).csproj",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Pweb(kilme).csproj",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
               "RelativeToolTip": "Pweb(kilme)\\Pweb(kilme).csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-14T00:33:03.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EstadoesController.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\EstadoesController.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\EstadoesController.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Controllers\\EstadoesController.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\EstadoesController.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\EstadoesController.cs",
               "RelativeToolTip": "Pweb(kilme)\\Controllers\\EstadoesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,11 +112,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "EstadoHR.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\EstadoHR.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\EstadoHR.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Models\\EstadoHR.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\EstadoHR.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\EstadoHR.cs",
               "RelativeToolTip": "Pweb(kilme)\\Models\\EstadoHR.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -90,11 +124,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Estado.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Estado.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Estado.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Models\\dbModels\\Estado.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Estado.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Estado.cs",
               "RelativeToolTip": "Pweb(kilme)\\Models\\dbModels\\Estado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,11 +136,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "QuintumHR.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\QuintumHR.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\QuintumHR.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Models\\QuintumHR.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\QuintumHR.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\QuintumHR.cs",
               "RelativeToolTip": "Pweb(kilme)\\Models\\QuintumHR.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,11 +148,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
               "RelativeToolTip": "Pweb(kilme)\\Views\\Quintums\\Create.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAADwvzcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -126,23 +160,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "tmpD0D3.tmp.cs",
               "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
               "ToolTip": "C:\\Users\\Mart\u00EDn\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\tmpD0D3.tmp.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAADgv1UAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T19:06:09.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "QuintumsController.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\QuintumsController.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\QuintumsController.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Controllers\\QuintumsController.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\QuintumsController.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Controllers\\QuintumsController.cs",
               "RelativeToolTip": "Pweb(kilme)\\Controllers\\QuintumsController.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAswFYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -150,11 +184,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "20241113183528_AddNombreToQuintum.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
               "RelativeToolTip": "Pweb(kilme)\\Migrations\\20241113183528_AddNombreToQuintum.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -162,11 +196,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Quintum.cs",
-              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
+              "DocumentMoniker": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
               "RelativeDocumentMoniker": "Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
-              "ToolTip": "C:\\Users\\Mart\u00EDn\\source\\repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
+              "ToolTip": "C:\\Users\\Mart\u00EDn\\Desktop\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
               "RelativeToolTip": "Pweb(kilme)\\Models\\dbModels\\Quintum.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
