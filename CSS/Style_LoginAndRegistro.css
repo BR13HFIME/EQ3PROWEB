@@ -8,10 +8,6 @@
    
 }
 body{
-    background-image: url(../IMG/img-quinta.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     color: #ff0000;
     height: 100vh;
     width: 100%;
