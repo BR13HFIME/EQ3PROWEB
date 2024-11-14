@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\wwwroot\\lib\\DataTable\\dataTables.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\dataTables.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\wwwroot\\lib\\DataTable\\dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\dataTables.min.js"
+    },
+    {
       "Id": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

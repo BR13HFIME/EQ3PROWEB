@@ -304,6 +304,11 @@ namespace Pweb_kilme_.Migrations
                     b.Property<int>("IdRedes")
                         .HasColumnType("int");
 
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<int>("PrecioPorPersona")
                         .HasColumnType("int");
 

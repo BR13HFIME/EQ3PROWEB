@@ -24,6 +24,9 @@ public partial class Quintum
 
     public int IdImagen { get; set; }
 
+    [StringLength(100)]
+    public string Nombre { get; set; } = null!; // Nueva propiedad
+
     [InverseProperty("IdQuintaNavigation")]
     public virtual ICollection<Datosreservacion> Datosreservacions { get; set; } = new List<Datosreservacion>();
 

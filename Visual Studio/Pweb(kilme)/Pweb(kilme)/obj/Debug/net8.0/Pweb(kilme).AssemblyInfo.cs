@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pweb(kilme)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c2726d8a02051cf6ec2242bce288ec0fc5a3e75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+956bb506921a1053b18fa9fba3640b920b7a6c45")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pweb(kilme)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pweb(kilme)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
