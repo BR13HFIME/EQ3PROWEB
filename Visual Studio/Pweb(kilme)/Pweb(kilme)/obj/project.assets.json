@@ -8477,19 +8477,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Martín\\.nuget\\packages\\": {}
+    "C:\\Users\\brian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+      "projectUniqueName": "C:\\Users\\brian\\Downloads\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
       "projectName": "Pweb(kilme)",
-      "projectPath": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
-      "packagesPath": "C:\\Users\\Martín\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Martín\\Source\\Repos\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\obj\\",
+      "projectPath": "C:\\Users\\brian\\Downloads\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\Pweb(kilme).csproj",
+      "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brian\\Downloads\\EQ3PROWEB\\Visual Studio\\Pweb(kilme)\\Pweb(kilme)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Martín\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
