@@ -78,6 +78,11 @@ namespace Pweb_kilme_.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [StringLength(100, ErrorMessage = "El límite de caracteres es de 100", MinimumLength = 10 )]
+            [Display(Name = "Nombre")]
+            public string Nombre { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 8)]
             [Display(Name = "Número de teléfono")]
             public string NumTel { get; set; }
