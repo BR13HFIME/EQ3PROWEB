@@ -17,6 +17,13 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRol>(options => options
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Accounts/Login";
+    options.LogoutPath = "/Identity/Accounts/Logout";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+}
+);
 
 var app = builder.Build();
 
@@ -37,7 +44,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // Aseg�rate de que la autenticaci�n est� configurada
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

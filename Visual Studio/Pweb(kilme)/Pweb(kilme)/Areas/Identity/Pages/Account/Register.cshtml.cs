@@ -78,12 +78,12 @@ namespace Pweb_kilme_.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "El límite de caracteres es de 100", MinimumLength = 10 )]
+            [StringLength(100, ErrorMessage = "El {0} debe ser de mínimo {2} y máximo {1} caracteres.", MinimumLength = 10 )]
             [Display(Name = "Nombre")]
             public string Nombre { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 8)]
+            [StringLength(100, ErrorMessage = "El {0} debe ser de mínimo {2} y máximo {1} caracteres.", MinimumLength = 8)]
             [Display(Name = "Número de teléfono")]
             public string NumTel { get; set; }
 
@@ -92,7 +92,7 @@ namespace Pweb_kilme_.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "El {0} debe ser de mínimo {2} y máximo {1} caracteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -103,7 +103,7 @@ namespace Pweb_kilme_.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Las contraseñas no son iguales, intenta de nuevo.")]
             public string ConfirmPassword { get; set; }
         }
 
