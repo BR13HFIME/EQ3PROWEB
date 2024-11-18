@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Pweb_kilme_.Models.dbModels.Quintum>
+
+<div class="album py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="@item.IdImagen" class="card-img-top" alt="Imagen de la quinta">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>Nombre:</strong> @Html.DisplayFor(modelItem => item.Nombre)<br />
+                                <strong>Dirección:</strong> @Html.DisplayFor(modelItem => item.Direccion)<br />
+                                <strong>Precio por Persona:</strong> @Html.DisplayFor(modelItem => item.PrecioPorPersona)<br />
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="PantallaDeReserva1.html" class="btn btn-sm btn-outline-warning">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
