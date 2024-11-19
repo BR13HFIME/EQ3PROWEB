@@ -22,7 +22,12 @@ namespace Pweb_kilme_.Controllers
         }
 
         // GET: Quintums
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index_Usuario()
+        {
+            return View(await _context.Quinta.ToListAsync());
+        }
+
+        public async Task<IActionResult> Index_Admin()
         {
             return View(await _context.Quinta.ToListAsync());
         }

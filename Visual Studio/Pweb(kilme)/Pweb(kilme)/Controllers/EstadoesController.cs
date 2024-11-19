@@ -53,7 +53,7 @@ namespace Pweb_kilme_.Controllers
         // POST: Estadoes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEstado,Estado1")] EstadoDTO estadoDTO)
+        public async Task<IActionResult> Create([Bind("IdEstado,Estado1")] Estado estadoDTO)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace Pweb_kilme_.Controllers
                 return NotFound();
             }
 
-            var estadoDTO = new EstadoDTO
+            var estadoDTO = new Estado
             {
                 IdEstado = estado.IdEstado,
                 Estado1 = estado.Estado1
@@ -96,7 +96,7 @@ namespace Pweb_kilme_.Controllers
         // POST: Estadoes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEstado,Estado1")] EstadoDTO estadoDTO)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEstado,Estado1")] Estado estadoDTO)
         {
             if (id != estadoDTO.IdEstado)
             {
