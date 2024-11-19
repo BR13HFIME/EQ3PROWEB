@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pweb_kilme_.Models.dbModels;
+using Pweb_kilme_.Models.DTO;
 
 namespace Pweb_kilme_.Controllers
 {
+    [Authorize]
     public class QuintumsController : Controller
     {
         private readonly PwebdbContext _context;
@@ -21,8 +24,7 @@ namespace Pweb_kilme_.Controllers
         // GET: Quintums
         public async Task<IActionResult> Index()
         {
-            var pwebdbContext = _context.Quinta.Include(q => q.IdImagenNavigation).Include(q => q.IdRedesNavigation);
-            return View(await pwebdbContext.ToListAsync());
+            return View(await _context.Quinta.ToListAsync());
         }
 
         // GET: Quintums/Details/5
@@ -34,8 +36,6 @@ namespace Pweb_kilme_.Controllers
             }
 
             var quintum = await _context.Quinta
-                .Include(q => q.IdImagenNavigation)
-                .Include(q => q.IdRedesNavigation)
                 .FirstOrDefaultAsync(m => m.IdQuinta == id);
             if (quintum == null)
             {
@@ -48,27 +48,31 @@ namespace Pweb_kilme_.Controllers
         // GET: Quintums/Create
         public IActionResult Create()
         {
-            ViewData["IdImagen"] = new SelectList(_context.Imgsquinta, "IdImg", "IdImg");
-            ViewData["IdRedes"] = new SelectList(_context.Redessociales, "IdRedes", "IdRedes");
             return View();
         }
 
         // POST: Quintums/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PrecioPorPersona,Direccion,IdRedes,IdQuinta,IdImagen,Nombre")] Quintum quintum)
+        public async Task<IActionResult> Create([Bind("IdQuinta,Nombre,Direccion,PrecioPorPersona,IdImagen,IdRedes")] QuintumDTO quintumDTO)
         {
             if (ModelState.IsValid)
             {
+                var quintum = new Quintum
+                {
+                    IdQuinta = quintumDTO.IdQuinta,
+                    Nombre = quintumDTO.Nombre,
+                    Direccion = quintumDTO.Direccion,
+                    PrecioPorPersona = quintumDTO.PrecioPorPersona,
+                    IdImagen = quintumDTO.IdImagen,
+                    IdRedes = quintumDTO.IdRedes
+                };
+
                 _context.Add(quintum);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdImagen"] = new SelectList(_context.Imgsquinta, "IdImg", "IdImg", quintum.IdImagen);
-            ViewData["IdRedes"] = new SelectList(_context.Redessociales, "IdRedes", "IdRedes", quintum.IdRedes);
-            return View(quintum);
+            return View(quintumDTO);
         }
 
         // GET: Quintums/Edit/5
@@ -84,19 +88,26 @@ namespace Pweb_kilme_.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdImagen"] = new SelectList(_context.Imgsquinta, "IdImg", "IdImg", quintum.IdImagen);
-            ViewData["IdRedes"] = new SelectList(_context.Redessociales, "IdRedes", "IdRedes", quintum.IdRedes);
-            return View(quintum);
+
+            var quintumsDTO = new QuintumDTO
+            {
+                IdQuinta = quintum.IdQuinta,
+                Nombre = quintum.Nombre,
+                Direccion = quintum.Direccion,
+                PrecioPorPersona = quintum.PrecioPorPersona,
+                IdImagen = quintum.IdImagen,
+                IdRedes = quintum.IdRedes
+            };
+
+            return View(quintumsDTO);
         }
 
         // POST: Quintums/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PrecioPorPersona,Direccion,IdRedes,IdQuinta,IdImagen,Nombre")] Quintum quintum)
+        public async Task<IActionResult> Edit(int id, [Bind("IdQuinta,Nombre,Direccion,PrecioPorPersona,IdImagen,IdRedes")] QuintumDTO quintumDTO)
         {
-            if (id != quintum.IdQuinta)
+            if (id != quintumDTO.IdQuinta)
             {
                 return NotFound();
             }
@@ -105,12 +116,22 @@ namespace Pweb_kilme_.Controllers
             {
                 try
                 {
+                    var quintum = new Quintum
+                    {
+                        IdQuinta = quintumDTO.IdQuinta,
+                        Nombre = quintumDTO.Nombre,
+                        Direccion = quintumDTO.Direccion,
+                        PrecioPorPersona = quintumDTO.PrecioPorPersona,
+                        IdImagen = quintumDTO.IdImagen,
+                        IdRedes = quintumDTO.IdRedes
+                    };
+
                     _context.Update(quintum);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!QuintumExists(quintum.IdQuinta))
+                    if (!QuintumExists(quintumDTO.IdQuinta))
                     {
                         return NotFound();
                     }
@@ -121,9 +142,7 @@ namespace Pweb_kilme_.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdImagen"] = new SelectList(_context.Imgsquinta, "IdImg", "IdImg", quintum.IdImagen);
-            ViewData["IdRedes"] = new SelectList(_context.Redessociales, "IdRedes", "IdRedes", quintum.IdRedes);
-            return View(quintum);
+            return View(quintumDTO);
         }
 
         // GET: Quintums/Delete/5
@@ -135,8 +154,6 @@ namespace Pweb_kilme_.Controllers
             }
 
             var quintum = await _context.Quinta
-                .Include(q => q.IdImagenNavigation)
-                .Include(q => q.IdRedesNavigation)
                 .FirstOrDefaultAsync(m => m.IdQuinta == id);
             if (quintum == null)
             {

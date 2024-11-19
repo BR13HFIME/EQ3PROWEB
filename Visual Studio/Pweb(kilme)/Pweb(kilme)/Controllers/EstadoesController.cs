@@ -51,19 +51,23 @@ namespace Pweb_kilme_.Controllers
         }
 
         // POST: Estadoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEstado,Estado1")] Estado estado)
+        public async Task<IActionResult> Create([Bind("IdEstado,Estado1")] EstadoDTO estadoDTO)
         {
             if (ModelState.IsValid)
             {
+                var estado = new Estado
+                {
+                    IdEstado = estadoDTO.IdEstado,
+                    Estado1 = estadoDTO.Estado1
+                };
+
                 _context.Add(estado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(estado);
+            return View(estadoDTO);
         }
 
         // GET: Estadoes/Edit/5
@@ -79,17 +83,22 @@ namespace Pweb_kilme_.Controllers
             {
                 return NotFound();
             }
-            return View(estado);
+
+            var estadoDTO = new EstadoDTO
+            {
+                IdEstado = estado.IdEstado,
+                Estado1 = estado.Estado1
+            };
+
+            return View(estadoDTO);
         }
 
         // POST: Estadoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEstado,Estado1")] Estado estado)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEstado,Estado1")] EstadoDTO estadoDTO)
         {
-            if (id != estado.IdEstado)
+            if (id != estadoDTO.IdEstado)
             {
                 return NotFound();
             }
@@ -98,12 +107,18 @@ namespace Pweb_kilme_.Controllers
             {
                 try
                 {
+                    var estado = new Estado
+                    {
+                        IdEstado = estadoDTO.IdEstado,
+                        Estado1 = estadoDTO.Estado1
+                    };
+
                     _context.Update(estado);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EstadoExists(estado.IdEstado))
+                    if (!EstadoExists(estadoDTO.IdEstado))
                     {
                         return NotFound();
                     }
@@ -114,7 +129,7 @@ namespace Pweb_kilme_.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(estado);
+            return View(estadoDTO);
         }
 
         // GET: Estadoes/Delete/5
