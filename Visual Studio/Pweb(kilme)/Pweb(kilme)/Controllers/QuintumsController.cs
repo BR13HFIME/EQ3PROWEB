@@ -75,7 +75,7 @@ namespace Pweb_kilme_.Controllers
 
                 _context.Add(quintum);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index_Usuario));
             }
             return View(quintumDTO);
         }
@@ -94,7 +94,7 @@ namespace Pweb_kilme_.Controllers
                 return NotFound();
             }
 
-            var quintumsDTO = new QuintumDTO
+            var quintumDTO = new QuintumDTO
             {
                 IdQuinta = quintum.IdQuinta,
                 Nombre = quintum.Nombre,
@@ -104,7 +104,7 @@ namespace Pweb_kilme_.Controllers
                 IdRedes = quintum.IdRedes
             };
 
-            return View(quintumsDTO);
+            return View(quintumDTO);
         }
 
         // POST: Quintums/Edit/5
@@ -145,7 +145,7 @@ namespace Pweb_kilme_.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index_Usuario));
             }
             return View(quintumDTO);
         }
@@ -180,7 +180,7 @@ namespace Pweb_kilme_.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index_Usuario));
         }
 
         private bool QuintumExists(int id)
