@@ -1,0 +1,48 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a !important;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.calendar-container {
+    margin-top: 20px;
+    text-align: center;
+    border-color: #fdf4d7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day, .empty {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.reservado {
+    background-color: #6ba3be;
+    color: white;
+}
+
+.libre {
+    background-color: #274d60;
+    color: white;
+}
+
+.lettercolor {
+    color: #ffffff;
+}

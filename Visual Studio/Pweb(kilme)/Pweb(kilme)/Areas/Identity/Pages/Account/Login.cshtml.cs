@@ -104,7 +104,8 @@ namespace Pweb_kilme_.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/");
+            // Ignorar el returnUrl y redirigir siempre a la página de inicio
+            returnUrl = Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 

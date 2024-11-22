@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Pweb_kilme_.Models.dbModels;
+using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,11 +20,23 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = "/Identity/Accounts/Login";
-    options.LogoutPath = "/Identity/Accounts/Logout";
+    options.LoginPath = "/Identity/Account/Login";
+    options.LogoutPath = "/Identity/Account/Logout";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-}
-);
+    options.Events.OnRedirectToLogin = context =>
+    {
+        // Redirigir sin ReturnUrl
+        if (context.Request.Path.StartsWithSegments("/Identity/Account/Login"))
+        {
+            context.Response.Redirect(options.LoginPath);
+        }
+        else
+        {
+            context.Response.Redirect(options.LoginPath);
+        }
+        return Task.CompletedTask;
+    };
+});
 
 var app = builder.Build();
 
