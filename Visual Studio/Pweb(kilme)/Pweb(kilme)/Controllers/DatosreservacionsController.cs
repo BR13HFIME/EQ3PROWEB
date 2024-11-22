@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pweb_kilme_.Models.dbModels;
+using Pweb_kilme_.Models.DTO;
 
 namespace Pweb_kilme_.Controllers
 {
@@ -62,21 +63,28 @@ namespace Pweb_kilme_.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdReservacion,Fecha,NumInvitados,IdEstado,IdUsuario,IdQuinta")] Datosreservacion datosreservacion)
+        public async Task<IActionResult> Create([Bind("IdReservacion,Fecha,NumInvitados,IdEstado,IdUsuario,IdQuinta")] DatosreservacionDTO datosreservacionDTO)
         {
             if (ModelState.IsValid)
             {
+                var datosreservacion = new Datosreservacion
+                {
+                    IdEstado = datosreservacionDTO.IdEstado,
+                    IdQuinta = datosreservacionDTO.IdQuinta,
+                    IdUsuario = datosreservacionDTO.IdUsuario,
+                    Fecha = datosreservacionDTO.Fecha,
+                    NumInvitados = datosreservacionDTO.NumInvitados
+                };
                 _context.Add(datosreservacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
-            return View(datosreservacion);
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacionDTO.IdEstado);
+            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacionDTO.IdQuinta);
+            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacionDTO.IdUsuario);
+            return View(datosreservacionDTO);
         }
 
-        // GET: Datosreservacions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -89,10 +97,21 @@ namespace Pweb_kilme_.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
-            return View(datosreservacion);
+
+            var datosreservacionDTO = new DatosreservacionDTO
+            {
+                IdReservacion = datosreservacion.IdReservacion,
+                Fecha = datosreservacion.Fecha,
+                NumInvitados = datosreservacion.NumInvitados,
+                IdEstado = datosreservacion.IdEstado,
+                IdUsuario = datosreservacion.IdUsuario,
+                IdQuinta = datosreservacion.IdQuinta,
+                Estados = new SelectList(_context.Estados, "IdEstado", "Estado1", datosreservacion.IdEstado),
+                Usuarios = new SelectList(_context.Users, "Id", "UserName", datosreservacion.IdUsuario),
+                Quintas = new SelectList(_context.Quinta, "IdQuinta", "Nombre", datosreservacion.IdQuinta)
+            };
+
+            return View(datosreservacionDTO);
         }
 
         // POST: Datosreservacions/Edit/5

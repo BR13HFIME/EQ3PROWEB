@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pweb_kilme_.Models.DTO
 {
@@ -15,5 +16,9 @@ namespace Pweb_kilme_.Models.DTO
         public int IdUsuario { get; set; }
 
         public int IdQuinta { get; set; }
+
+        public required SelectList Estados { get; set; }
+        public required SelectList Quintas { get; set; }
+        public required SelectList Usuarios { get; set; }
     }
 }
