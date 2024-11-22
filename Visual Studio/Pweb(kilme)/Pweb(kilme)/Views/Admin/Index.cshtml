@@ -6,15 +6,16 @@
 @{
     ViewData["Title"] = "Admin Index";
 }
-
+<link rel="stylesheet" href="CSS/Configuration_users.css">
 <div class="d-flex">
     <!-- Barra de navegación vertical -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">Admin Panel</div>
-        <div class="list-group list-group-flush">
-            <a href="@Url.Action("Index_Admin", "Quintums")" class="list-group-item list-group-item-action bg-light">Quintums</a>
-            <a href="@Url.Action("Index", "Datosreservacions")" class="list-group-item list-group-item-action bg-light">Datos de Reservación</a>
-        </div>
+    <div>
+        <nav class="sidebar_nav">
+            <a href="#"><i class="bx bx-home-alt-2"></i>inicio</a>
+            <a href="#"><i class="bx bx-briefcase"></i>Inicio</a>
+            <a href="#"><i class="bx bx-group"></i>Inicio</a>
+            <a href="#"><i class="bx bx-contact"></i>Inicio</a>
+        </nav>
     </div>
 
     <!-- Contenido principal -->
@@ -24,14 +25,4 @@
     </div>
 </div>
 
-<style>
-    #sidebar-wrapper {
-        width: 250px;
-        position: fixed;
-        height: 100%;
-    }
 
-    .container-fluid {
-        margin-left: 250px;
-    }
-</style>
