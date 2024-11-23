@@ -32,6 +32,7 @@ namespace Pweb_kilme_.Controllers
             return View(await _context.Quinta.ToListAsync());
         }
 
+
         // GET: Quintums/Details/5
         public async Task<IActionResult> Details(int? id)
         {
