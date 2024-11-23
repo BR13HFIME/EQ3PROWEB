@@ -3,11 +3,11 @@
     width: 160px;
     position: fixed;
     z-index: 1;
-    top: 5;
+    top: 5.6%;
     left: 0;
     background-color: #28282c;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
     .sidebar_nav a {
