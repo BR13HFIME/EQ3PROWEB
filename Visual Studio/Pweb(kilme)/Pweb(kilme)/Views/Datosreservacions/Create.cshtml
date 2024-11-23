@@ -1,8 +1,5 @@
 ﻿@model Pweb_kilme_.Models.DTO.DatosreservacionDTO
 
-@{
-    ViewData["Title"] = "Create";
-}
 
 <!-- Asegúrate de que la ruta del archivo CSS sea correcta -->
 <link rel="stylesheet" href="~/css/PantallaReservacion.css" asp-append-version="true">
@@ -35,7 +32,7 @@
     <h2 class="lettercolor">Quinta</h2>
     <p class="lettercolor">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias itaque inventore, libero iusto,
-        necessitatibus voluptate provident repudiandae tempore maiores repellendus asperiores optio dicta quo nulla
+        necessitatibus voluptate provident repudiandae tempore mayores repellendus asperiores optio dicta quo nulla
         nostrum obcaecati. Consequatur, tempora cumque.
     </p>
 </section>
@@ -68,16 +65,14 @@
                         <label for="startDate" class="lettercolor form-label">Fecha de Entrada</label>
                         <input type="date" class="form-control" id="startDate" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="endDate" class="lettercolor form-label">Fecha de Salida</label>
-                        <input type="date" class="form-control" id="endDate" required>
-                    </div>
                     <button type="submit" class="lettercolor btn btn-primary">Reservar</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+
     
 <div>
     <a asp-action="Index">Back to List</a>

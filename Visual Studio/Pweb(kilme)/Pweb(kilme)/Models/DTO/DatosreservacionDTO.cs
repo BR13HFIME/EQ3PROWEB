@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace Pweb_kilme_.Models.DTO
@@ -7,6 +8,9 @@ namespace Pweb_kilme_.Models.DTO
     {
         public int IdReservacion { get; set; }
 
+        [FromQuery(Name = "idQuinta")]
+        public int IdQuinta { get; set; }
+
         public DateOnly Fecha { get; set; }
 
         public int NumInvitados { get; set; }
@@ -14,8 +18,6 @@ namespace Pweb_kilme_.Models.DTO
         public int IdEstado { get; set; }
 
         public int IdUsuario { get; set; }
-
-        public int IdQuinta { get; set; }
 
         public required SelectList Estados { get; set; }
         public required SelectList Quintas { get; set; }
