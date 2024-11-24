@@ -1,9 +1,21 @@
-﻿.sidebar_nav {
-    height: 100%;
+﻿/* Estilo para el navbar */
+.navbar {
+    height: 60px; /* Altura fija para el navbar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 2;
+}
+
+/* Estilo para la sidebar */
+.sidebar_nav {
+    height: calc(100% - 60px); /* Ajusta la altura para que no se superponga con el navbar */
     width: 160px;
     position: fixed;
     z-index: 1;
-    top: 5.6%;
+    top: 60px; /* Ajusta la posición para que esté debajo del navbar */
     left: 0;
     background-color: #28282c;
     overflow-x: hidden;
@@ -30,8 +42,10 @@
         margin-right: 5px;
     }
 
+/* Estilo para el contenido principal */
 .content_main {
-    margin-left: 160px;
+    margin-left: 160px; /* Ajusta el margen izquierdo para que no se superponga con la sidebar */
+    margin-top: 80px; /* Ajusta el margen superior para que no se superponga con el navbar */
     font-size: 22px;
     padding: 10px;
 }
@@ -42,4 +56,8 @@
 
 .fa-2xl {
     color: #fdeac9;
+}
+
+.container {
+    /* Puedes agregar estilos adicionales aquí si es necesario */
 }

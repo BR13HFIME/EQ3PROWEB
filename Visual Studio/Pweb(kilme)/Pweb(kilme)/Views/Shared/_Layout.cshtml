@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="~/Pweb_kilme_.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/SeleccionQuintas.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Style_Layout.css" />
+    <link rel="stylesheet" href="~/css/Inicio_General.css" asp-append-version="true" />
 
 
 </head>
-<body>
+<body class="page-top">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bg-body-tertiary bg-dark border-body fixed-top">
             <div class="container-fluid">
@@ -44,10 +45,19 @@
         </main>
     </div>
 
+
+
+    <footer class="footer">
+        <p>&copy; 2024 Renta Quintas. Todos los derechos reservados.</p>
+    </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="/js/fontawesome.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
