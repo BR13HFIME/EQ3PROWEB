@@ -10,5 +10,9 @@ namespace Pweb_kilme_.Controllers
         {
             return View();
         }
+        public IActionResult ReporteAdmin()
+        {
+            return View();
+        }
     }
 }

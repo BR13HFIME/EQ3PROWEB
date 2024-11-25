@@ -1,25 +1,15 @@
-﻿/* Estilo para el navbar */
-.navbar {
-    height: 60px; /* Altura fija para el navbar */
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    z-index: 2;
-}
+﻿
 
 /* Estilo para la sidebar */
 .sidebar_nav {
-    height: calc(100% - 60px); /* Ajusta la altura para que no se superponga con el navbar */
-    width: 160px;
     position: fixed;
-    z-index: 1;
-    top: 60px; /* Ajusta la posición para que esté debajo del navbar */
+    top: 0;
     left: 0;
-    background-color: #28282c;
-    overflow-x: hidden;
-    padding-top: 100px;
+    width: 200px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-top: 20px;
 }
 
     .sidebar_nav a {
@@ -58,6 +48,3 @@
     color: #fdeac9;
 }
 
-.container {
-    /* Puedes agregar estilos adicionales aquí si es necesario */
-}
