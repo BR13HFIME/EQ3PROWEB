@@ -1,5 +1,32 @@
-﻿const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-let fechasOcupadas = ["2024-11-15", "2024-11-16", "2024-11-20"];
+﻿var dominioURL = "https://virtserver.swaggerhub.com/BRIANREYNADZD/Pweb-PIA-QUINTA-EQ/1.0.0";
+
+let fechasOcupadas = [];
+
+function traerFechas() {
+    $.ajax({
+        url: dominioURL + "/reservaciones",
+        type: 'GET',
+        dataType: 'json',
+        crossDomain: true,
+    }).done(function (result) {
+        fechasOcupadas = [];
+        $(result).each(function (index) {
+            if (this.fecha) {
+                fechasOcupadas.push(this.fecha);
+            }
+        });
+        renderizarCalendario(); // Renderiza el calendario con las nuevas fechas
+    }).fail(function (xhr, status, error) {
+        swal.fire({
+            icon: 'error',
+            title: 'Error al traer fechas',
+            text: 'Tenemos un problema al traer las fechas recientes.',
+            footer: 'Favor de intentarlo nuevamente más tarde.',
+        });
+    });
+}
+
+const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 let fechaActual = new Date();
 
 function renderizarCalendario() {
@@ -55,7 +82,9 @@ function agregarReserva(fechaInicio, fechaFin) {
     renderizarCalendario();
 }
 
-document.addEventListener("DOMContentLoaded", renderizarCalendario);
+document.addEventListener("DOMContentLoaded", function () {
+    traerFechas(); // Llama a traerFechas cuando el DOM esté cargado
+});
 
 const bookingForm = document.getElementById("bookingForm");
 bookingForm.addEventListener("submit", function (event) {
@@ -71,4 +100,3 @@ bookingForm.addEventListener("submit", function (event) {
         alert("Por favor, selecciona las fechas de entrada y salida.");
     }
 });
-
