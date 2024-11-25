@@ -1,56 +1,88 @@
-﻿@model Pweb_kilme_.Models.dbModels.Quintum
+﻿@model Pweb_kilme_.Models.DTO.DatosreservacionDTO
 
-@{
-    ViewData["Title"] = "Create";
-}
 
-<h1>Create</h1>
+<!-- Asegúrate de que la ruta del archivo CSS sea correcta -->
+<link rel="stylesheet" href="~/css/PantallaReservacion.css" asp-append-version="true">
 
-<h4>Quintum</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PrecioPorPersona" class="control-label"></label>
-                <input asp-for="PrecioPorPersona" class="form-control" />
-                <span asp-validation-for="PrecioPorPersona" class="text-danger"></span>
+<!-- Galería de Imágenes -->
+<section class="container mt-4">
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/IMG/img-quinta.jpg" class="d-block w-100" alt="Imagen 1">
             </div>
-            <div class="form-group">
-                <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
-                <span asp-validation-for="Direccion" class="text-danger"></span>
+            <div class="carousel-item">
+                <img src="~/IMG/img2.jpg" class="d-block w-100" alt="Imagen 2">
             </div>
-            <div class="form-group">
-                <label asp-for="IdRedes" class="control-label"></label>
-                <select asp-for="IdRedes" class ="form-control" asp-items="ViewBag.IdRedes"></select>
+            <div class="carousel-item">
+                <img src="~/IMG/img3.jpg" class="d-block w-100" alt="Imagen 3">
             </div>
-            <div class="form-group">
-                <label asp-for="IdQuinta" class="control-label"></label>
-                <input asp-for="IdQuinta" class="form-control" />
-                <span asp-validation-for="IdQuinta" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdImagen" class="control-label"></label>
-                <select asp-for="IdImagen" class ="form-control" asp-items="ViewBag.IdImagen"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
     </div>
-</div>
+</section>
 
+<!-- Descripción del lugar -->
+<section class="container mt-4">
+    <h2 class="lettercolor">Quinta</h2>
+    <p class="lettercolor">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias itaque inventore, libero iusto,
+        necessitatibus voluptate provident repudiandae tempore mayores repellendus asperiores optio dicta quo nulla
+        nostrum obcaecati. Consequatur, tempora cumque.
+    </p>
+</section>
+
+<!-- Apartado de Reservas -->
+<section class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="lettercolor">Calendario de Reservas</h3>
+            <div class="calendar-container">
+                <div class="header">
+                    <button onclick="cambiarMes(-1)">&#8592;</button>
+                    <h2 id="month-year" class="lettercolor">Noviembre 2024</h2>
+                    <button onclick="cambiarMes(1)">&#8594;</button>
+                </div>
+                <div class="calendar">
+                    <!-- Días generados por JavaScript -->
+                </div>
+                <div class="legend mt-2">
+                    <span class="lettercolor legend-item reservado">Reservado</span>
+                    <span class="lettercolor legend-item libre">Libre</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <h3 class="lettercolor">Reserva tu Estancia</h3>
+                <form id="bookingForm" asp-action="Create" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="startDate" class="lettercolor form-label">Fecha de Entrada</label>
+                        <input type="date" class="form-control" id="startDate" required>
+                    </div>
+                    <button type="submit" class="lettercolor btn btn-primary">Reservar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
 
+<!-- Asegúrate de que la ruta del archivo JavaScript sea correcta -->
+<script src="~/js/PantallaReservacion.js" asp-append-version="true"></script>
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

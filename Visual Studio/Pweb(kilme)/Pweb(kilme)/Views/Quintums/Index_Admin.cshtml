@@ -2,7 +2,7 @@
 
 
 <div class="album py-5">
-    <div class="container">
+    <div class="container m-5">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @foreach (var item in Model)
             {
@@ -18,8 +18,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a class="btn btn-sm btn-outline-warning" asp-area="" asp-controller="Datosreservacions" asp-action="Create" asp-route-idQuinta="@item.IdQuinta">Reserva</a>
-                                    <a href="@Url.Action("Edit", "Quintums", new { id = item.IdQuinta })" class="btn btn-sm btn-outline-primary">Editar</a>
-                                    <a href="@Url.Action("Delete", "Quintums", new { id = item.IdQuinta })" class="btn btn-sm btn-outline-danger">Borrar</a>
+                                    <a href="@Url.Action("Edit", "Quintums", new { idQuinta = item.IdQuinta })" class="btn btn-sm btn-outline-primary">Editar</a>
+                                    <a href="@Url.Action("Delete", "Quintums", new { idQuinta = item.IdQuinta })" class="btn btn-sm btn-outline-danger">Borrar</a>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 ﻿@model Pweb_kilme_.Models.DTO.DatosreservacionDTO
-
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<Pweb_kilme_.Models.dbModels.ApplicationUser> UserManager
 
 <!-- Asegúrate de que la ruta del archivo CSS sea correcta -->
 <link rel="stylesheet" href="~/css/PantallaReservacion.css" asp-append-version="true">
@@ -58,22 +59,29 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="col-md-6">
-                <h3 class="lettercolor">Reserva tu Estancia</h3>
-                <form id="bookingForm" asp-action="Create" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="startDate" class="lettercolor form-label">Fecha de Entrada</label>
-                        <input type="date" class="form-control" id="startDate" required>
-                    </div>
-                    <button type="submit" class="lettercolor btn btn-primary">Reservar</button>
-                </form>
-            </div>
+            <h3 class="lettercolor">Reserva tu Estancia</h3>
+            <form id="bookingForm" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="IdQuinta" class="lettercolor form-label">Quinta</label>
+                    <input type="hidden" id="IdQuinta" name="IdQuinta" value="@Model.IdQuinta" />
+                    <p class="form-control-static">@Model.IdQuinta</p>
+                </div>
+                <div class="mb-3">
+                    <label for="Fecha" class="lettercolor form-label">Fecha</label>
+                    <input type="date" class="form-control" id="Fecha" name="Fecha" required>
+                </div>
+                <div class="mb-3">
+                    <label for="NumInvitados" class="lettercolor form-label">Número de invitados</label>
+                    <input type="number" class="form-control" id="NumInvitados" name="NumInvitados" required>
+                </div>
+                <input type="hidden" id="IdEstado" name="IdEstado" value="2" />
+                <input type="hidden" id="IdUsuario" name="IdUsuario" value="@(User?.Identity?.IsAuthenticated == true ? UserManager.GetUserId(User) : string.Empty)"/>
+                <button type="submit" class="lettercolor btn btn-primary">Reservar</button>
+            </form>
         </div>
     </div>
 </section>
 
-
-    
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

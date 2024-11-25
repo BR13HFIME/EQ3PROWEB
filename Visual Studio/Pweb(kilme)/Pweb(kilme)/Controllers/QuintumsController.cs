@@ -33,6 +33,7 @@ namespace Pweb_kilme_.Controllers
         }
 
 
+
         // GET: Quintums/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -57,61 +58,37 @@ namespace Pweb_kilme_.Controllers
             return View();
         }
 
-        // POST: Quintums/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdQuinta,Nombre,Direccion,PrecioPorPersona,IdImagen,IdRedes")] QuintumDTO quintumDTO)
         {
             if (ModelState.IsValid)
             {
-                var quintum = new Quintum
+                int? idImagen = await GuardarFotografiaProductoasync(quintumDTO.imagenes);
+                if (idImagen.HasValue)
                 {
-                    IdQuinta = quintumDTO.IdQuinta,
-                    Nombre = quintumDTO.Nombre,
-                    Direccion = quintumDTO.Direccion,
-                    PrecioPorPersona = quintumDTO.PrecioPorPersona,
-                    IdImagen = quintumDTO.IdImagen,
-                    IdRedes = quintumDTO.IdRedes
-                };
+                    var quintum = new Quintum
+                    {
+                        IdQuinta = quintumDTO.IdQuinta,
+                        Nombre = quintumDTO.Nombre,
+                        Direccion = quintumDTO.Direccion,
+                        PrecioPorPersona = quintumDTO.PrecioPorPersona,
+                        IdImagen = idImagen.Value,
+                        IdRedes = quintumDTO.IdRedes
+                    };
 
-                _context.Add(quintum);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index_Usuario));
+                    _context.Add(quintum);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index_Usuario));
+                }
             }
-            return View(quintumDTO);
-        }
-
-        // GET: Quintums/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var quintum = await _context.Quinta.FindAsync(id);
-            if (quintum == null)
-            {
-                return NotFound();
-            }
-
-            var quintumDTO = new QuintumDTO
-            {
-                IdQuinta = quintum.IdQuinta,
-                Nombre = quintum.Nombre,
-                Direccion = quintum.Direccion,
-                PrecioPorPersona = quintum.PrecioPorPersona,
-                IdImagen = quintum.IdImagen,
-                IdRedes = quintum.IdRedes
-            };
-
             return View(quintumDTO);
         }
 
         // POST: Quintums/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdQuinta,Nombre,Direccion,PrecioPorPersona,IdImagen,IdRedes")] QuintumDTO quintumDTO)
+        public async Task<IActionResult> Edit(int id, [Bind("IdQuinta,Nombre,Direccion,PrecioPorPersona,IdImagen,IdRedes,imagenes")] QuintumDTO quintumDTO)
         {
             if (id != quintumDTO.IdQuinta)
             {
@@ -122,18 +99,22 @@ namespace Pweb_kilme_.Controllers
             {
                 try
                 {
-                    var quintum = new Quintum
+                    int? idImagen = await GuardarFotografiaProductoasync(quintumDTO.imagenes);
+                    if (idImagen.HasValue)
                     {
-                        IdQuinta = quintumDTO.IdQuinta,
-                        Nombre = quintumDTO.Nombre,
-                        Direccion = quintumDTO.Direccion,
-                        PrecioPorPersona = quintumDTO.PrecioPorPersona,
-                        IdImagen = quintumDTO.IdImagen,
-                        IdRedes = quintumDTO.IdRedes
-                    };
+                        var quintum = new Quintum
+                        {
+                            IdQuinta = quintumDTO.IdQuinta,
+                            Nombre = quintumDTO.Nombre,
+                            Direccion = quintumDTO.Direccion,
+                            PrecioPorPersona = quintumDTO.PrecioPorPersona,
+                            IdImagen = idImagen.Value,
+                            IdRedes = quintumDTO.IdRedes
+                        };
 
-                    _context.Update(quintum);
-                    await _context.SaveChangesAsync();
+                        _context.Update(quintum);
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,6 +130,28 @@ namespace Pweb_kilme_.Controllers
                 return RedirectToAction(nameof(Index_Usuario));
             }
             return View(quintumDTO);
+        }
+        public async Task<int?> GuardarFotografiaProductoasync(IFormFile? file)
+        {
+            if (file != null)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                var imagen = new Imgsquintum
+                {
+                    ImgQuinta = file.FileName
+                };
+
+                _context.Imgsquinta.Add(imagen);
+                await _context.SaveChangesAsync();
+
+                return imagen.IdImg;
+            }
+            return null;
         }
 
         // GET: Quintums/Delete/5
