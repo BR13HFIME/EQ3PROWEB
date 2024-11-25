@@ -1,0 +1,58 @@
+﻿/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to bottom, #d1b7a1, #a18167);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 90px;
+}
+
+    .banner h1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+/* Tarjetas de contacto */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+    .card h3 {
+        color: #3a2d28;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        margin: 5px 0;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }

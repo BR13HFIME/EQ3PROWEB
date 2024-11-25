@@ -3,5 +3,74 @@
     ViewData["Title"] = "Contactanos";
 }
 
-<h1>Contactanos</h1>
+<link href="~/css/Contacto.css" rel="stylesheet" asp-append-version="true" />
+<script src="~/js/fontawesome.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Banner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Contact Us</h1>
+            <p>
+                Mantente al día con nuestras promociones y recibe actualizaciones en tiempo real sobre el estado de nuestras quintas
+            </p>
+            <div class="contact-cards">
+                <div class="card">
+                    <h3>Correo Electronico</h3>
+                    <p>correocauai@gmail.com</p>
+                </div>
+                <div class="card">
+                    <h3>Numero de Telefono</h3>
+                    <p>81XXXXXXXXXXXX0</p>
+                </div>
+                <div class="card">
+                    <h3>Direccion</h3>
+                    <p>Calle momichi, #699, Nuevo Leon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Instagram
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><a href="https://www.instagram.com/">Instagram</a></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Facebook
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><a href="https://www.facebook.com">Facebook</a></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Twitter
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><a href="https://x.com/">Twitter</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 
