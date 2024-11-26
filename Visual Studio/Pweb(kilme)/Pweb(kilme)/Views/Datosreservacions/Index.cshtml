@@ -4,14 +4,18 @@
     ViewData["Title"] = "Index";
 }
 <link rel="stylesheet" href="~/css/datatables.min.css" />
-
+<link rel="stylesheet" href=""
 
 <h1>Index</h1>
-
+<nav class="sidebar_nav">
+    <a asp-area="" asp-controller="Datosreservacions" asp-action="Index"><i class="bx bx-home-alt-2"></i>Reservaciones</a>
+    <a asp-area="" asp-controller="Admin" asp-action="ReporteAdmin"><i class="bx bx-briefcase"></i>Reportes</a>
+    <a href="#"><i class="bx bx-group"></i>Configuracion</a>
+</nav>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table id ="table" class="cell-border row-border">
+<table class="table cell-border row-border">
     <thead>
         <tr>
             <th>
@@ -51,11 +55,14 @@
                 @Html.DisplayFor(modelItem => item.IdUsuarioNavigation.Id)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdReservacion">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdReservacion">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdReservacion">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdReservacion"><i class="fa-solid fa-pencil"></i></a> 
+                    <a asp-action="Details" asp-route-id="@item.IdReservacion"><i class="fa-solid fa-plus"></i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.IdReservacion"><i class="fa-solid fa-delete-left"></i></a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<script src="~/js/datatables.min.js"></script>
+<script src="~/js/tablas_datosreservacion.js"></script>

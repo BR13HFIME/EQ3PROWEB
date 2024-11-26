@@ -13,6 +13,6 @@ namespace Pweb_kilme_.Controllers
         public IActionResult ReporteAdmin()
         {
             return View();
-        }
+        }       
     }
 }
