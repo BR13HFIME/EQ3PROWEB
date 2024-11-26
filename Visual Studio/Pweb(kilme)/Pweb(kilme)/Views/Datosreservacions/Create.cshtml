@@ -1,21 +1,22 @@
-﻿@model Pweb_kilme_.Models.DTO.DatosreservacionDTO
-@using Microsoft.AspNetCore.Identity
+﻿@model Pweb_kilme_.Models.dbModels.Datosreservacion
 
-<!-- Asegúrate de que la ruta del archivo CSS sea correcta -->
-<link rel="stylesheet" href="~/css/PantallaReservacion.css" asp-append-version="true">
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" href="~/css/PantallaReservacion.css" />
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 <!-- Galería de Imágenes -->
 <section class="container mt-4">
     <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="~/IMG/img-quinta.jpg" class="d-block w-100" alt="Imagen 1">
-            </div>
-            <div class="carousel-item">
-                <img src="~/IMG/img2.jpg" class="d-block w-100" alt="Imagen 2">
-            </div>
-            <div class="carousel-item">
-                <img src="~/IMG/img3.jpg" class="d-block w-100" alt="Imagen 3">
+                <img src="~/images/img-quinta.jpg" class="d-block w-100" alt="Imagen 1">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
@@ -32,7 +33,7 @@
     <h2 class="lettercolor">Quinta</h2>
     <p class="lettercolor">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias itaque inventore, libero iusto,
-        necessitatibus voluptate provident repudiandae tempore mayores repellendus asperiores optio dicta quo nulla
+        necessitatibus voluptate provident repudiandae tempore maiores repellendus asperiores optio dicta quo nulla
         nostrum obcaecati. Consequatur, tempora cumque.
     </p>
 </section>
@@ -59,46 +60,26 @@
         </div>
         <div class="col-md-6">
             <h3 class="lettercolor">Reserva tu Estancia</h3>
-            <form id="bookingForm" asp-action="Create" method="post" enctype="multipart/form-data">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="IdReservacion" />
-                <div class="form-group">
-                    <label asp-for="Fecha" class="control-label lettercolor"></label>
-                    <input asp-for="Fecha" class="form-control" />
-                    <span asp-validation-for="Fecha" class="text-danger"></span>
+            <form id="bookingForm" asp-action="Create">
+                <div class="mb-3">
+                    <label for="startDate" class="lettercolor form-label">Fecha de Entrada</label>
+                    <input type="date" class="form-control" id="startDate" asp-for="Fecha" required>
                 </div>
-                <div class="form-group">
-                    <label asp-for="NumInvitados" class="control-label lettercolor"></label>
-                    <input asp-for="NumInvitados" class="form-control" />
-                    <span asp-validation-for="NumInvitados" class="text-danger"></span>
+                <div class="mb-3">
+                    <label for="NumInvitados" class="lettercolor form-label">Número de Invitados</label>
+                    <input type="number" class="form-control" id="NumInvitados" asp-for="NumInvitados" required>
                 </div>
-                <input type="hidden" asp-for="IdEstado" value="2" />
+                <input type="hidden" asp-for="IdQuinta" value="1" />
                 <input type="hidden" asp-for="IdUsuario" value="1" />
-                <div class="form-group">
-                    <input type="submit" value="Reservar" class="btn btn-primary lettercolor" />    
-                </div>
+                <input type="hidden" asp-for="IdEstado" value="2" />
+                <button type="submit" class="lettercolor btn btn-primary">Reservar</button>
             </form>
         </div>
-        </div>
-        </section>
+    </div>
+</section>
 
-        <div>
-            <a asp-action="Index">Back to List</a>
-        </div>
-
-        <!-- Asegúrate de que la ruta del archivo JavaScript sea correcta -->
-        <script src="~/js/PantallaReservacion.js" asp-append-version="true"></script>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const idQuinta = urlParams.get('idQuinta');
-                    document.getElementById('IdQuinta').value = idQuinta;
-            });
-        </script>
+<script src="~/js/PantallaReservacion.js"></script>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
