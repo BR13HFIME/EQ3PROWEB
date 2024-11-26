@@ -100,3 +100,31 @@ document.addEventListener("DOMContentLoaded", function () {
    //     alert("Por favor, selecciona las fechas de entrada y salida.");
    // }
 //});
+
+function confirmarReserva(event) {
+    event.preventDefault(); // Prevenir el envío del formulario inmediatamente
+
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¿Deseas confirmar esta reservación?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, reservar!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                '¡Reservado!',
+                'Tu reservación ha sido confirmada.',
+                'success'
+            );
+
+            // Enviar el formulario después de la confirmación
+            document.getElementById('bookingForm').submit();
+        }
+    });
+
+    return false; // Prevenir el envío automático
+}
