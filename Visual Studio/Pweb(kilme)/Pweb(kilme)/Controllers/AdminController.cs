@@ -14,5 +14,9 @@ namespace Pweb_kilme_.Controllers
         {
             return View();
         }
+        public IActionResult Conf_Reservaciones()
+        {
+            return View();
+        }
     }
 }
