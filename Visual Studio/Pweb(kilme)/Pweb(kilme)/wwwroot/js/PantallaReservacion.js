@@ -86,17 +86,17 @@ document.addEventListener("DOMContentLoaded", function () {
     traerFechas(); // Llama a traerFechas cuando el DOM esté cargado
 });
 
-const bookingForm = document.getElementById("bookingForm");
-bookingForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+//const bookingForm = document.getElementById("bookingForm");
+//bookingForm.addEventListener("submit", function (event) {
+  //  event.preventDefault();
 
-    const startDate = document.getElementById("startDate").value;
-    const endDate = document.getElementById("endDate").value;
+    //const startDate = document.getElementById("startDate").value;
+    //const endDate = document.getElementById("endDate").value;
 
-    if (startDate && endDate) {
-        agregarReserva(startDate, endDate);
-        alert("Reserva realizada con éxito.");
-    } else {
-        alert("Por favor, selecciona las fechas de entrada y salida.");
-    }
-});
+//    if (startDate && endDate) {
+  //      agregarReserva(startDate, endDate);
+   //     alert("Reserva realizada con éxito.");
+   // } else {
+   //     alert("Por favor, selecciona las fechas de entrada y salida.");
+   // }
+//});

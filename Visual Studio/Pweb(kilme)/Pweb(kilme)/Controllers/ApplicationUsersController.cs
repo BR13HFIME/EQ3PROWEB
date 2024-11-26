@@ -32,14 +32,16 @@ namespace Pweb_kilme_.Controllers
                 return NotFound();
             }
 
-            var applicationUser = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (applicationUser == null)
+            var datosreservacion = await _context.Datosreservacions
+                .Include(d => d.IdEstadoNavigation)
+                .Include(d => d.IdQuintaNavigation)
+                .Include(d => d.IdUsuarioNavigation)
+                .FirstOrDefaultAsync(m => m.IdReservacion == id);
+            if (datosreservacion == null)
             {
                 return NotFound();
             }
 
-            return View(applicationUser);
         }
 
         // GET: ApplicationUsers/Create

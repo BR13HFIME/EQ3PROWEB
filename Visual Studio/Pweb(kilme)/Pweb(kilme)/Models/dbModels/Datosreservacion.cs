@@ -27,13 +27,13 @@ public partial class Datosreservacion
 
     [ForeignKey("IdEstado")]
     [InverseProperty("Datosreservacions")]
-    public virtual Estado IdEstadoNavigation { get; set; } = null!;
+    public virtual Estado IdEstadoNavigation { get; set; } = new Estado();
 
     [ForeignKey("IdQuinta")]
     [InverseProperty("Datosreservacions")]
-    public virtual Quintum IdQuintaNavigation { get; set; } = null!;
+    public virtual Quintum IdQuintaNavigation { get; set; } = new Quintum();
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("Datosreservacions")]
-    public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
+    public virtual ApplicationUser IdUsuarioNavigation { get; set; } = new ApplicationUser();
 }

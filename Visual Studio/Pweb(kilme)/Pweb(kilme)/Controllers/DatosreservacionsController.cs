@@ -49,14 +49,7 @@ namespace Pweb_kilme_.Controllers
             return View(datosreservacion);
         }
 
-        // GET: Datosreservacions/Create
-        public IActionResult Create()
-        {
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado");
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta");
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id");
-            return View();
-        }
+
 
         // POST: Datosreservacions/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -79,9 +72,9 @@ namespace Pweb_kilme_.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacionDTO.IdEstado);
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacionDTO.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacionDTO.IdUsuario);
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "Estado1", datosreservacionDTO.IdEstado);
+            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "Nombre", datosreservacionDTO.IdQuinta);
+            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "UserName", datosreservacionDTO.IdUsuario);
             return View(datosreservacionDTO);
         }
 
