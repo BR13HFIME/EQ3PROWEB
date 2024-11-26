@@ -18,5 +18,17 @@ namespace Pweb_kilme_.Controllers
         {
             return View();
         }
+        public IActionResult Conf_ReservacionesPendientes()
+        {
+            return View();
+        }
+        public IActionResult Admin_Conf()
+        {
+            return View();
+        }
+        public IActionResult Admin_ConfUser()
+        {
+            return View();
+        }
     }
 }
