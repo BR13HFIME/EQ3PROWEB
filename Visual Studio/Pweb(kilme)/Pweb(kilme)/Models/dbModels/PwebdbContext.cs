@@ -34,9 +34,8 @@ public partial class PwebdbContext : IdentityDbContext<ApplicationUser, Applicat
         modelBuilder.Entity<Datosreservacion>(entity =>
         {
             entity.HasKey(e => e.IdReservacion).HasName("PK_datosreservacion_IdReservacion");
-
-            entity.Property(e => e.IdReservacion).ValueGeneratedNever();
-
+            entity.Property(d => d.IdReservacion).ValueGeneratedOnAdd();
+            
             entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Datosreservacions)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("datosreservacion$datosreservacion_ibfk_3");
@@ -54,21 +53,21 @@ public partial class PwebdbContext : IdentityDbContext<ApplicationUser, Applicat
         {
             entity.HasKey(e => e.IdEstado).HasName("PK_estado_IdEstado");
 
-            entity.Property(e => e.IdEstado).ValueGeneratedNever();
+            entity.Property(d => d.IdEstado).ValueGeneratedOnAdd();
         });
 
         modelBuilder.Entity<Imgsquintum>(entity =>
         {
             entity.HasKey(e => e.IdImg).HasName("PK_imgsquinta_IdImg");
 
-            entity.Property(e => e.IdImg).ValueGeneratedNever();
+            entity.Property(d => d.IdImg).ValueGeneratedOnAdd();
         });
 
         modelBuilder.Entity<Quintum>(entity =>
         {
             entity.HasKey(e => e.IdQuinta).HasName("PK_quinta_IdQuinta");
 
-            entity.Property(e => e.IdQuinta).ValueGeneratedNever();
+            entity.Property(d => d.IdQuinta).ValueGeneratedOnAdd();
 
             entity.HasOne(d => d.IdImagenNavigation).WithMany(p => p.Quinta)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -83,10 +82,9 @@ public partial class PwebdbContext : IdentityDbContext<ApplicationUser, Applicat
         {
             entity.HasKey(e => e.IdRedes).HasName("PK_redessociales_IdRedes");
 
-            entity.Property(e => e.IdRedes).ValueGeneratedNever();
+            entity.Property(d => d.IdRedes).ValueGeneratedOnAdd();
         });
 
-        OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

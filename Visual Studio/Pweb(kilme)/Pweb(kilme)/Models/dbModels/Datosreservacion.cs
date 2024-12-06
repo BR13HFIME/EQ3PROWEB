@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Pweb_kilme_.Models.dbModels;
@@ -27,13 +28,13 @@ public partial class Datosreservacion
 
     [ForeignKey("IdEstado")]
     [InverseProperty("Datosreservacions")]
-    public virtual Estado IdEstadoNavigation { get; set; } = new Estado();
+    public virtual Estado? IdEstadoNavigation { get; set; }
 
     [ForeignKey("IdQuinta")]
     [InverseProperty("Datosreservacions")]
-    public virtual Quintum IdQuintaNavigation { get; set; } = new Quintum();
+    public virtual Quintum? IdQuintaNavigation { get; set; }
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("Datosreservacions")]
-    public virtual ApplicationUser IdUsuarioNavigation { get; set; } = new ApplicationUser();
+    public virtual ApplicationUser? IdUsuarioNavigation { get; set; }
 }

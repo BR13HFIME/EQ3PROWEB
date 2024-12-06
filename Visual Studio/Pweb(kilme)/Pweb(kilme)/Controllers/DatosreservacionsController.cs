@@ -62,16 +62,35 @@ namespace Pweb_kilme_.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdReservacion,Fecha,NumInvitados,IdEstado,IdUsuario,IdQuinta")] Datosreservacion datosreservacion)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"Error: {error.ErrorMessage}");
+                }
+
+                // Envía un mensaje temporal para depuración
+                ViewBag.ErrorMessage = "El modelo no es válido. Verifica los datos.";
+                ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
+                ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
+                ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
+                return View(datosreservacion);
+            }
+            try
             {
                 _context.Add(datosreservacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
-            return View(datosreservacion);
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                Console.WriteLine($"Error al guardar en la base de datos: {ex.Message}");
+                ViewBag.ErrorMessage = "Hubo un problema al guardar la reservación.";
+                return View(datosreservacion);
+            }
+            
+            
         }
 
         // GET: Datosreservacions/Edit/5
