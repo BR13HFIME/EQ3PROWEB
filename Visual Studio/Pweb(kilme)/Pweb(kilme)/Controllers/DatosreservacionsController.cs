@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pweb_kilme_.Models.dbModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace Pweb_kilme_.Controllers
 {
@@ -47,11 +48,10 @@ namespace Pweb_kilme_.Controllers
         }
 
         // GET: Datosreservacions/Create
-        public IActionResult Create()
+        public IActionResult Create(int idQuinta)
         {
             ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado");
-            ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta");
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["IdQuinta"] = idQuinta;
             return View();
         }
 
@@ -60,38 +60,43 @@ namespace Pweb_kilme_.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdReservacion,Fecha,NumInvitados,IdEstado,IdUsuario,IdQuinta")] Datosreservacion datosreservacion)
+        public async Task<IActionResult> Create([Bind("Fecha,NumInvitados,IdEstado")] Datosreservacion datosreservacion, int idQuinta)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                try
                 {
-                    Console.WriteLine($"Error: {error.ErrorMessage}");
-                }
+                    // Obtener el ID del usuario y convertirlo a entero
+                    var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
 
-                // Envía un mensaje temporal para depuración
-                ViewBag.ErrorMessage = "El modelo no es válido. Verifica los datos.";
-                ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
-                ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-                ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
-                return View(datosreservacion);
+                    if (int.TryParse(userIdClaim, out int userId))
+                    {
+                        datosreservacion.IdUsuario = userId;
+                        datosreservacion.IdQuinta = idQuinta;
+
+                        // Agregar la reservación al contexto
+                        _context.Add(datosreservacion);
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "No se pudo obtener el ID del usuario.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al guardar en la base de datos: {ex.Message}");
+                    ViewBag.ErrorMessage = "Hubo un problema al guardar la reservación.";
+                }
             }
-            try
-            {
-                _context.Add(datosreservacion);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores
-                Console.WriteLine($"Error al guardar en la base de datos: {ex.Message}");
-                ViewBag.ErrorMessage = "Hubo un problema al guardar la reservación.";
-                return View(datosreservacion);
-            }
-            
-            
+
+            // Si el modelo no es válido o hay un error, regresa a la vista
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
+            ViewData["IdQuinta"] = idQuinta;
+            return View(datosreservacion);
         }
+
 
         // GET: Datosreservacions/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -108,7 +113,6 @@ namespace Pweb_kilme_.Controllers
             }
             ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
             ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
             return View(datosreservacion);
         }
 
@@ -146,7 +150,6 @@ namespace Pweb_kilme_.Controllers
             }
             ViewData["IdEstado"] = new SelectList(_context.Estados, "IdEstado", "IdEstado", datosreservacion.IdEstado);
             ViewData["IdQuinta"] = new SelectList(_context.Quinta, "IdQuinta", "IdQuinta", datosreservacion.IdQuinta);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "Id", datosreservacion.IdUsuario);
             return View(datosreservacion);
         }
 
